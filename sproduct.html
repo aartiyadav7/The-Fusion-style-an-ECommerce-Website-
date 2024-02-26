@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/742f57d1dc.js" crossorigin="anonymous"></script>
+
+    <title>The Fusion Style Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        /*  <div class="blog-post"> */
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display:flex;
+            margin-top:20px;
+
+            
+        }
+
+        .blog-post2{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top:20px;
+        }
+        .blog-post2 h1{
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+        }
+        .blog-post span{
+            color: red;
+        }
+    
+        #container{
+            background-color: #f4f4f4;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 40px 120px;
+        border: 2px solid black;
+    }
+    #Pagination{
+        text-align: center;
+
+    }
+    #Pagination a{
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration:none;
+        padding: 15px 20px;
+        font-weight: 600;
+        border-radius: 4px;
+    }
+    /* For Arrow */
+    #Pagination a i{
+        font-size: 16px;
+        font-weight: 600;
+    }
+   .Single-Img{
+    width: 46%;
+    margin-right: -85px;
+    margin-left: 51px;
+        }
+        .Single-Img img{
+                width: 71%;
+        }
+ .Small-Imgs{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width: 71%;
+    gap:1px;
+
+}
+
+
+.Prod-Container{
+    padding-top:25px;
+    width:50%;
+    margin-right: 11px;
+    /* margin-right: 50px; */
+    display:flex;
+    /* justify-content: flex-end; Delete  */
+    flex-direction: column;
+    /* paddding:12px 12px; */
+}
+.small-imgs-col{
+ flex-basis: 25%;
+ display: inline-block;
+ box-sizing: border-box;
+ cursor:pointer;
+}
+.small-imgs-col img{
+    width: 100%; /* Set the width to fill the container */
+        height: 200px; /* Set the desired height for the images */
+        object-fit: cover; 
+}
+.Prod-Container h4{
+    
+            padding: 2px 0 41px 0;
+    }
+.Prod-Container h2{
+    padding-bottom: 5px;
+    font-size: 24px;
+    }
+    .Prod-Container h1{
+        padding-bottom: 30px;
+    font-size: 24px;
+    }
+    .Prod-Container h5{
+        color:#6d7270;
+        font-size: 15px;
+    }
+.Prod-Container select{
+       
+       display: block;
+    padding: 9px 13px;
+    width: 37%;
+    margin-bottom: -8px;
+}
+.Prod-Container input{
+    width: 8%;
+    display: block;
+    padding: 11px 9px;
+    margin-bottom: 21px;
+}
+.Prod-Container button{
+  font-size:26px;
+  width: 32%;
+    margin-left: 16px;
+    height: 40%;
+    margin-top: 8px;
+    background-color: #eff3f2;
+    border-radius: 50px;
+    display: flex;
+    padding-bottom:22px;
+}
+.Prod-Container button i{
+    color:#088178;
+    padding:5px;
+}
+.Prod-Container button h1{
+    padding: 6px 10px;
+    font-size: 15px;
+    color:#088178;
+}
+.Prod-Container p{
+    line-height:25px;
+    width: 80%;
+}
+.Prod-Container h1{
+                font-size:15px;
+              }
+ .Prod-Container span{
+                font-size:20px;
+                color:red;
+                margin-left:10px;
+              }
+              
+.row{
+    display:flex;
+    align-items: center;
+}
+.star{
+    color:rgb(243,181,25);
+    padding-bottom: 37px;
+}
+
+    </style>
+</head> 
+<body>
+    <header>
+        <h1>The Fusion Style</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">ContactUs</a></li>
+            </ul>
+        </nav>
+       
+        <button id="view-cart1">View Cart</button>
+      
+    
+
+    </header>
+
+   <section id="container">
+        <div class="blog-post"> 
+
+        <div class="Single-Img">
+            <img src="img/Dress.jpg" alt="Main Image" id="mainImg">
+        
+                            
+        <div class="Small-Imgs">
+
+            <div class="small-imgs-col">
+            <img src="img/Ethnic.jpeg" width="100%" class="small-img" onclick="changeImage(this)">
+            </div>
+            <div class="small-imgs-col">
+                <img src="img/LongTrousers.jpeg" width="100%" class="small-img" onclick="changeImage(this)">
+                </div>
+                <div class="small-imgs-col">
+                    <img src="img/Dress.jpg" width="100%" class="small-img" onclick="changeImage(this)">
+                    </div>
+                    <div class="small-imgs-col">
+                        <img src="img/Dress.jpg" width="100%" class="small-img" onclick="changeImage(this)">
+                        </div>
+                        </div>
+                     </div>
+            <div class="Prod-Container">
+                <h4>Home/Jumpsuit</h4>
+              <h2>Women Jumpsuit</h2>
+              <h5>08 Reviews</h5>
+              <div class="star">          
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+               </div>
+              <h1>Was $1229.00 <span>Now $1120.00 </span></h1>
+              
+
+        
+              <!-- Size Option -->
+              <select> 
+                <option>FIND YOUR SIZE</option>
+                <option>Small</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXl</option>
+              </select>
+             
+             
+
+              <div class="row">
+              <input type="number" value="1">
+              <button><i class="fa-solid fa-cart-shopping"></i> 
+                <h1>ADD TO CART</h1></button>
+            </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et minima dolorum sunt? Incidunt, maxime! Incidunt aspernatur animi ratione placeat ad expedita, quisquam, accusantium porro in maiores obcaecati veniam consequuntur.</p>
+              <p>CHECK IN-STORE AVAILABILITY</p>
+              <P>SHIPPING, EXCHANGES AND RETURNS</P>
+              
+            </div>
+
+    </div>
+
+        <h1>You may also Like</h1> 
+    
+        <div class="blog-post2">
+                    <div class="pro"> 
+                    <img src="img/saree.jpg" alt="Product 1">
+                    <div class="product-info">   
+                        <h3>ATHENA</h3>
+                        <span>Printed basic Jumpsuit</span>
+                        <div class="star">
+                            
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4>$79</h4> 
+                        <i class="fa-solid fa-cart-shopping fa-bounce cart"></i>
+                    </div>
+                    </div>            
+                    <div class="pro"> 
+                    <img src="img/saree.jpg" alt="Product 1">
+                    <div class="product-info">   
+                        <h3>ATHENA</h3>
+                        <span>Printed basic Jumpsuit</span>
+                        <div class="star">
+                            
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <h4>$79</h4> 
+                        <i class="fa-solid fa-cart-shopping fa-bounce cart"></i>
+                    </div>
+                    </div>
+                    <div class="pro"> 
+                        <img src="img/saree.jpg" alt="Product 1">
+                        <div class="product-info">   
+                            <h3>ATHENA</h3>
+                            <span>Printed basic Jumpsuit</span>
+                            <div class="star">
+                                
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <h4>$79</h4> 
+                            <i class="fa-solid fa-cart-shopping fa-bounce cart"></i>
+                        </div>
+                        </div>
+                        <div class="pro"> 
+                            <img src="img/saree.jpg" alt="Product 1">
+                            <div class="product-info">   
+                                <h3>ATHENA</h3>
+                                <span>Printed basic Jumpsuit</span>
+                                <div class="star">
+                                    
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <h4>$79</h4> 
+                                <i class="fa-solid fa-cart-shopping fa-bounce cart"></i>
+                            </div>
+                            </div>
+                        </div>
+                   
+    </section> 
+ 
+   
+        <!-- Newsletter -->
+<div id="News" class="section-P">
+    <div class="Newsletter">
+        <h1> Sign Up For Newsletters</h1>
+        <p> Get email updated about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address" required>
+        <button>Sign Up</button>
+    </div>
+    </div>
+    
+    <footer class="section-P">
+        <div class="col">
+            <!-- <img src = "img/Thelogo.png">  Must have NO baackground & the name shoud be clearly seen. -->
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>
+                <u>300 Post Street, 486 Wellington Road,</u> 
+                San Francisco
+            </p>
+        <p><strong>Phone: </strong><u>(415) 848-4445 </u></p>
+        <p><strong>Hours: </strong><u>10.00 - 18.00 MON-SAT</u></p> 
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+            <i class="fa-brands fa-square-facebook" style="color: #517bc2;"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter" style="color: #5b85cd;"></i>
+            <i class="fab fa-google" style="color: #517bc2;"></i>
+            <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        </div>
+        </div>
+         <!-- About Column -->
+    <div class="col">
+        <h4>About</h4>
+        <a href= "#">About Us</p>
+     <a href="#">Delivery Information</a>
+     <a href="#">Privacy Policy</a>
+     <a href="#">Tearms & conditions</a>
+     <a href="#">Contact Us</a>
+    </div>
+    <!-- My account Column -->
+<div class="col">
+    <h4>My account</h4>
+        <a href= "#">Sign in</a>
+    <a href="#">View Cart</a>
+    <a href="#">My Wishlish</a>
+    <a href="#">Track My order</a>
+    <a href="#">Help</a>
+   </div>
+ 
+<!-- The Last Cloumn Of Payment  -->
+   <div class="col-install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+        <img src="img/Apple1.jpeg" alt="Apple" class="src">
+        <img src="img/play.jpg" alt="Google Play" class="src">
+    </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/Paym.jpg" alt=" payment Cards" class="src">
+    </div>
+    
+   <div class="Copyright">
+    <p> © 2023, The Fusion Style - HTML CSS E-commerce Template</p>
+   </div>
+    
+   <script>
+   function changeImage(element) {
+            var mainImage = document.getElementById("mainImg");
+            mainImage.src = element.src;
+        }
+</script>
+  
+   <script src="script.js">
+   </script>
+</footer>
+</body>
+</html>
